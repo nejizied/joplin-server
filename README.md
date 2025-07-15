@@ -77,7 +77,7 @@ Adjust the resource limits or add additional services as needed.
 
 ## 1. Cannot connect to PostgreSQL database:
 
-Make sure the POSTGRES_PASSWORD, POSTGRES_USER, and POSTGRES_DB are correctly set in the .env file and match the ones in the Docker Compose file.
+Make sure the ``POSTGRES_PASSWORD``, ``POSTGRES_USER``, and ``POSTGRES_DB`` are correctly set in the **``.env``** file and match the ones in the Docker Compose file.
 
 ## 2. App is not accessible
 
