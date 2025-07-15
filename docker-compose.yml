@@ -20,7 +20,7 @@ services:
         restart: unless-stopped
         environment:
             - APP_PORT=22300
-            - APP_BASE_URL=https://joplin-server.zorasdomain.me
+            - APP_BASE_URL=${APP_URL}
             - DB_CLIENT=pg
             - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
             - POSTGRES_DATABASE=${POSTGRES_DB}
