@@ -67,7 +67,7 @@ The PostgreSQL database is configured to persist its data in the ./data/postgres
 
 # Customization
 
-You can modify the docker-compose.yml file and the .env file to customize the Joplin server deployment further. For example:
+You can modify the docker-compose.yml file and the ``.env`` file to customize the Joplin server deployment further. For example:
 
 Modify the ports if you have conflicts or want to expose the services differently.
 
@@ -92,3 +92,7 @@ OR docker logs -f <container_name/container_id>
 ## 3. Out of storage
 
 Ensure that the data/postgres directory has enough space for the database.
+
+# Reverse Proxy
+
+If you want to use a reverse proxy (ex: Nginx) with your domain, please make sure to update ``Line 3`` in the **`nginx_joplin_server.conf`** and ``line 23`` in **``docker-compose.yml``* with your custom domain, otherwise you will not be able to access your application and you will encounter. ``Invalid origin: http://148.113.201.187:22300`` Error
