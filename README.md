@@ -72,3 +72,23 @@ You can modify the docker-compose.yml file and the .env file to customize the Jo
 Modify the ports if you have conflicts or want to expose the services differently.
 
 Adjust the resource limits or add additional services as needed.
+
+# Troubleshooting
+
+## 1. Cannot connect to PostgreSQL database:
+
+Make sure the POSTGRES_PASSWORD, POSTGRES_USER, and POSTGRES_DB are correctly set in the .env file and match the ones in the Docker Compose file.
+
+## 2. App is not accessible
+
+Check the logs for any errors by running:
+
+```bash
+
+docker-compose logs app
+OR docker logs -f <container_name/container_id>
+```
+
+## 3. Out of storage
+
+Ensure that the data/postgres directory has enough space for the database.
