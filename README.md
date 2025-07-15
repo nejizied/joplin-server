@@ -29,3 +29,43 @@ POSTGRES_USER=your_postgres_user
 POSTGRES_DB=your_postgres_database
 APP_URL=http://your-domain-or-ip:22300
 
+# Deploying Joplin Server
+
+To deploy the Joplin Server with Docker Compose, follow these steps:
+
+## 1. Clone this repository:
+
+```bash
+git clone https://github.com/yourusername/joplin-server-docker.git
+cd joplin-server-docker
+
+## 2. Create a .env file in the root of the project and fill in your environment variables as described above.
+
+## 3. Build and start the Docker containers:
+
+```bash
+docker-compose up -d
+
+This will pull the necessary images (if not already pulled), create the containers, and start them in the background.
+
+## 4. Verify that the services are running:
+```bash
+docker-compose ps
+OR
+docker ps -a
+
+You should see the db and app containers running.
+
+Access Joplin Server by visiting http://your-domain-or-ip:22300 in your browser.
+
+# Backups
+
+The PostgreSQL database is configured to persist its data in the ./data/postgres directory on your host machine. You can back up this directory to ensure that your notes and data are safe.
+
+# Customization
+
+You can modify the docker-compose.yml file and the .env file to customize the Joplin server deployment further. For example:
+
+Modify the ports if you have conflicts or want to expose the services differently.
+
+Adjust the resource limits or add additional services as needed.
