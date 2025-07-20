@@ -95,4 +95,4 @@ Ensure that the data/postgres directory has enough space for the database.
 
 # Reverse Proxy
 
-If you want to use a reverse proxy (ex: Nginx) with your domain, please make sure to update ``Line 3`` in the **`nginx_joplin_server.conf`** and ``line 23`` in **``docker-compose.yml``* with your custom domain, otherwise you will not be able to access your application and you will encounter. ``Invalid origin: http://148.113.201.187:22300`` Error
+If you want to use a reverse proxy (ex: Nginx) with your domain, please make sure to update ``Line 3`` in the **`nginx_joplin_server.conf`** and ``line 23`` in **``docker-compose.yml``* with your custom domain, otherwise you will not be able to access your application and you will encounter. ``Invalid origin: http://ip-addr:22300`` Error
